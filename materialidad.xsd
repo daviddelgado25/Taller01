@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Definición del elemento raíz -->
+  <xs:element name="empresa_sostenible">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="stakeholders" type="stakeholdersType"/>
+        <xs:element name="temas_materiales" type="temasMaterialesType"/>
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Tipo para stakeholders -->
+  <xs:complexType name="stakeholdersType">
+    <xs:sequence>
+      <xs:element name="stakeholder" type="stakeholderType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Tipo para stakeholder -->
+  <xs:complexType name="stakeholderType">
+    <xs:sequence>
+      <xs:element name="descripcion" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="nombre" type="xs:string" use="required"/>
+    <xs:attribute name="importancia" type="importanciaType" use="required"/>
+  </xs:complexType>
+  <!-- Tipo para importancia -->
+  <xs:simpleType name="importanciaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="alta"/>
+      <xs:enumeration value="media"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Tipo para temas_materiales -->
+  <xs:complexType name="temasMaterialesType">
+    <xs:sequence>
+      <xs:element name="tema_material" type="temaMaterialType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Tipo para tema_material -->
+  <xs:complexType name="temaMaterialType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="descripcion" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="impacto_ASG" type="impactoASGType" use="required"/>
+  </xs:complexType>
+  <!-- Tipo para impacto_ASG -->
+  <xs:simpleType name="impactoASGType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ambiental"/>
+      <xs:enumeration value="Social"/>
+      <xs:enumeration value="Gobernanza"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
