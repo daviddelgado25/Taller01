@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa_sostenible nombre="ConsultoraWeb">
+    <stakeholders>
+        <!-- Cliente corporativo -->
+        <stakeholder nombre="Clientes Corporativos" importancia="alta">
+            <descripcion>Empresas que contratan servicios de desarrollo web y exigen cumplimiento normativo y calidad técnica.</descripcion>
+        </stakeholder>
+        <!-- Usuarios finales -->
+        <stakeholder nombre="Usuarios Finales" importancia="alta">
+            <descripcion>Personas que utilizan las aplicaciones desarrolladas y dependen de su accesibilidad, privacidad y seguridad.</descripcion>
+        </stakeholder>
+        <!-- Proveedores tecnológicos -->
+        <stakeholder nombre="Proveedores Tecnológicos" importancia="media">
+            <descripcion>Servicios cloud, hosting y APIs que condicionan el rendimiento, la seguridad y el consumo energético.</descripcion>
+        </stakeholder>
+    </stakeholders>
+    <temas_materiales>
+        <!-- Tema ambiental -->
+        <tema_material id="TM1" impacto_ASG="Ambiental">
+            <nombre>Eficiencia Energética del Software</nombre>
+            <descripcion>Optimización del código para reducir el uso de CPU, memoria y energía en servidores.</descripcion>
+        </tema_material>
+        <!-- Tema social -->
+        <tema_material id="TM2" impacto_ASG="Social">
+            <nombre>Accesibilidad Universal</nombre>
+            <descripcion>Garantizar que las aplicaciones sean utilizables por personas con diversas capacidades.</descripcion>
+        </tema_material>
+        <!-- Tema gobernanza -->
+        <tema_material id="TM3" impacto_ASG="Gobernanza">
+            <nombre>Privacidad y Seguridad de Datos</nombre>
+            <descripcion>Protección ética y legal de la información personal.</descripcion>
+        </tema_material>
+    </temas_materiales>
+</empresa_sostenible>
